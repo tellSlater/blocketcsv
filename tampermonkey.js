@@ -146,7 +146,7 @@
 
     for (const card of cards) {
       const a = card.querySelector('a.sf-search-ad-link');
-      const title = a ? a.textContent.trim() : '';
+      const title = a ? a.parentNode.childNodes[2].childNodes[0].childNodes[1].textContent.trim() : '';
       const link = a ? absolutizeUrl(a.getAttribute('href')) : '';
 
       const priceSek = extractPriceSek(card);
